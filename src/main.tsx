@@ -2,16 +2,18 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
 
-import Home from './pages/home/index.tsx'
-import GlobalStyles from './styles/global.tsx'
-import Theme from './styles/theme.ts'
+
+import GlobalStyles from './styles/global'
+import Thema from './styles/theme.ts'
 import { ThemeProvider } from 'styled-components'
+import App from './app/Index/index.tsx'
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ThemeProvider  theme={Theme}>
+    <ThemeProvider  theme={Thema}>
       <GlobalStyles/>
-       <Home/>
+       <App/>
     </ThemeProvider>
   </StrictMode>,
 )

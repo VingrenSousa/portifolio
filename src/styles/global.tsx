@@ -11,23 +11,42 @@ export default createGlobalStyle`
   body,
   #root {
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
+    
   }
 
   body {
-    background-color: ${({theme})=>theme.COLOR.white};
-    color:${({theme})=>theme.COLOR.black};
-    -webkit-font-smoothing: antialiased;
-  }
+    background-color: ${({theme})=>theme.COLOR.black};
+    color:${({theme})=>theme.COLOR.white};
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+   
+    font-style: normal;
+    overflow:hidden
+    
+
+  };
+
+  
+
+  
 
   body,
   input,
+  span,
   button,
   textarea {
-    font-family: "Roboto Slab", serif;
-    font-size: 16px;
-    outline: none;
-  }
+     font-family: "Fira Code", monospace;
+     font-optical-sizing: auto;
+
+     font-style: normal;
+     font-size: 1rem;
+     outline: none;
+  } 
+  
 
   a {
     text-decoration: none;
