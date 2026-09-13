@@ -5,9 +5,9 @@ type props={
     title:boolean
 }
 export const Conteiner = styled.button<props>`
-    border:1px solid ${({theme})=>theme.COLOR.white};
- 
-    min-width:${({title})=>title?"200px":" fit-content"};
+    border:0.05rem solid ${({theme})=>theme.COLOR.white};
+    height:50px;
+    min-width:${({title})=>title?"200px":"50px"};
     border-radius:${({title,icon})=>!title&&icon?"100%":"26px"};
     display: flex;
     padding: 12px;

@@ -25,7 +25,7 @@ export default createGlobalStyle`
     font-optical-sizing: auto;
    
     font-style: normal;
-    overflow:hidden
+    overflow:auto
     
 
   };

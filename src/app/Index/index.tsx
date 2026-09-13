@@ -1,13 +1,16 @@
-import ButtomDefault from "../../components/Button";
+
 import Header from "../../components/header";
+import SectionAbout from "../SectionAbout";
+import SectionHome from "../SectionHome";
 import { Conteiner } from "./styles";
-import { SlArrowRight } from "react-icons/sl";
+
 
 export default function App(){
     return(
         <Conteiner>
             <Header/>
-
+            <SectionHome/>
+            <SectionAbout/>
         </Conteiner>
     )
 }

@@ -43,10 +43,11 @@ export const Content=styled.div`
     
 `
 export const Menu=styled.div`
-   display: none;
+    display: none;
     
     justify-content: center;
-   
+    z-index:10;
+    background-color:${({theme})=>theme.COLOR.black};
     @media screen and (max-width: 700px) {
           
         display: flex;
