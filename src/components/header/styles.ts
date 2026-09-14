@@ -48,6 +48,7 @@ export const Menu=styled.div`
     justify-content: center;
     z-index:10;
     background-color:${({theme})=>theme.COLOR.black};
+    transition:all 0.4s ease;
     @media screen and (max-width: 700px) {
           
         display: flex;
