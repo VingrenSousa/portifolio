@@ -4,6 +4,9 @@ export const Conteiner=styled.header`
     width: 100%;
     max-height:70px;
     position: sticky;
+    top: 0;
+    background-color:${({theme})=>theme.COLOR.black};
+    z-index: 2;
 `
 
 export const Content=styled.div`
@@ -11,6 +14,7 @@ export const Content=styled.div`
     justify-content:space-between;
     padding: 18px;
     align-items:center;
+    
 
     >h2{
         font-size:1rem;

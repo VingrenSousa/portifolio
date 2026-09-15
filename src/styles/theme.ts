@@ -6,5 +6,14 @@ export default {
         black:"#121212"
 
     }
+    
+
+}
+
+export const LiNKS={
+    github:"https://github.com/VingrenSousa",
+    linkedin:"https://www.linkedin.com/in/vingren-souza-dias-23886b380",
+    email:"mailto:vingrendev@gmail.com?subject=Contato%20pelo%20Portfólio",
+    Instagram:"https://www.instagram.com/vingrensouza/"
 
 }

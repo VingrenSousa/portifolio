@@ -1,14 +1,15 @@
 import styled from "styled-components";
-type directleft={
 
-}
-export const Conteiner =styled.div<{directleft:boolean}>`
+export const Conteiner =styled.div<{directleft:boolean,visible:boolean}>`
     display: flex;
     padding: 22px;
     width: 100%;
     gap:10px;
     align-items: center;
     flex-direction:${({directleft})=>directleft?"row-reverse":"row"};
+    transition:all 1s ease;
+    opacity: ${({visible})=>visible?1:0};
+    transform:${({visible,directleft})=>visible?"translateX(0px)":`translateX(${directleft?"100px":"-100px"})`};
 
     >div{
         width: 40%;

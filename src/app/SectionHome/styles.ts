@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
-export const Conteiner=styled.section`
+export const Conteiner=styled.section<{visible:boolean}>`
     width: 100%;
     min-height:calc( 100vh - 70px);
+    transition:all 1s ease;
+    opacity: ${({visible})=>visible?"1":"0"};
+    transform:${({visible})=>visible?" translateX(0px)":" translateX(-100px)"};;
   
    
 

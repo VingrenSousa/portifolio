@@ -1,11 +1,11 @@
-import ButtomDefault from "../../components/Button";
-import ConteinerSocialMidia from "../../components/ConteinerSocialMidia";
+
+import { LiNKS } from "../../styles/theme";
 import { Conteiner, ContentFooter } from "./styles";
 
 export default function Footer(){
     return(
         <Conteiner>
-            <div>
+            <div className="conteinerTitle">
                 <div>
                     <h1>Vingren</h1>
                     <div/>
@@ -19,9 +19,9 @@ export default function Footer(){
             </div>
             <ContentFooter icon={false}>
                 <div>
-                    <ButtomDefault color="black" title="gitHub"/>
-                    <ButtomDefault color="black" title="Linkedin"/>
-                    <ButtomDefault color="black" title="E-Mail"/>
+                    <a  href={LiNKS.github}>.../github...</a>
+                    <a  href={LiNKS.linkedin}>.../linkedin...</a>
+                    <a  href={LiNKS.email}>.../E-Mail...</a>
                 </div>
             </ContentFooter>
         </Conteiner>

@@ -1,13 +1,20 @@
 import styled from "styled-components";
 
 export const Conteiner=styled.footer`
-    width:100%;
+    width:95%;
+    margin-left:2.5%;
     margin-top:100px;
     display: flex;
-    flex-direction:column;
+    flex-direction:row;
     min-height:40vh;
 
-    >div{
+    border-top:1px solid ${({theme})=>theme.COLOR.cinza_500};
+    
+    align-items:center;
+    
+
+    .conteinerTitle{
+        
         display: flex;
         flex-direction:column;
         padding-left:30px;
@@ -20,71 +27,69 @@ export const Conteiner=styled.footer`
             };
         
             h1{
-                font-size: 5rem;
+                font-size: 3rem;
             }  
         }
         
     }
     @media screen and ( max-width:750px){
-        >div{
-        padding-left:30px;
 
-        >div{
-              display: flex;
-              gap:40px;
-            span{
-                font-size: 15px;
-            };
+        flex-direction:column;
+        .conteinerTitle{
+            
+
+            >div{
+                display: flex;
+                gap:40px;
+                span{
+                    font-size: 15px;
+                };
+            
+                h1{
+                    font-size: 2rem;
+                }  
+            }
         
-            h1{
-                font-size: 4rem;
-            }  
         }
-        
-    }
-        
-    
-    
     }
 
 `
 
 export const ContentFooter=styled.div<{icon:boolean}>`
-    width: 95%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap:10px;
->div{
-    padding:40px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-top:1px solid ${({theme})=>theme.COLOR.cinza_100};
-    width: 100%;
-
-    >button{
-     
-        >h3{
-            
-        }
-    }
    
-}
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    justify-content: center;
+    align-items:center;
+   
+  
+        >div{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex:1;
+            border:2px solid ${({theme})=>theme.COLOR.cinza_500};
+            flex-direction:column;
+            gap: 10px;
+            justify-content: center;
+            padding:30px;
+            
+            text-decoration:none;
+             >a{
+                color:${({theme})=>theme.COLOR.cinza_100}
+             }
+        
+        }
 
  @media screen and ( max-width:750px){
->div{
-   
+    >div{
+    justify-content: center;
+    align-items:center
 
-    >button{
-         min-width:100px;
-         height:35px;
-        >h3{
-            font-size: 1rem;
-        }
+    
+    
     }
-   
-}
       
-    }
+}
 `

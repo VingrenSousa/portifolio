@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
-export const Conteiner=styled.section`
+export const Conteiner=styled.section<{visible:boolean}>`
     width:100% ;
     min-height: calc(100vh - 60px);
     display: flex;
     flex-direction:column;
+
+    
 
   
     >main{  
@@ -13,6 +15,11 @@ export const Conteiner=styled.section`
         flex-direction:row-reverse;
         justify-content:space-between;
         align-items:center;
+        opacity:${({visible})=>visible?"1":"0"}; 
+        transform:${({visible})=>visible?"translateX(0px)":"translateX(100px)"};
+
+        transition:all 1s ease;
+        z-index: 1;
      
         padding: 50px 0;
         >.divImgProfile{
@@ -26,7 +33,7 @@ export const Conteiner=styled.section`
         }
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1320px) {
         >main{
             flex-direction:column;
             
@@ -56,6 +63,7 @@ export const Conteiner=styled.section`
          
     }
 `
+
 export const HedaerAbout=styled.div`
     display: flex;
     flex-direction:row;
@@ -107,7 +115,7 @@ export const Content=styled.div`
     >div{
        transition: all 0.3s ease; 
     }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1320px) {
         
         align-items: center;
         width: 100%;

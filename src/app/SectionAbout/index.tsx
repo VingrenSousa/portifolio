@@ -1,14 +1,39 @@
 import { Conteiner, Content, HedaerAbout } from "./styles";
 import imgProfile from "../../assets/profile.png"
 import ConteinerSkils from "../../components/conteinerSkills";
+import { useEffect, useRef, useState } from "react";
 
 export default function SectionAbout(){
     const stekesFrontend=["html","css","react","styled.Componet","TypeScript","JavaScript","Vite"]
     const stekesBackend=["node.js","express","TypeScript","REST.API","JWT","Bcrypt","Knex.js","SQLite"]
     const stekesMobile=["React Native","Expo","Expo.Router","TypeScript"]
     const stekesFerramentas=["git","gitHub","axios"]
+
+    const refAbout= useRef<HTMLDivElement>(null)
+
+    const [visible,setVisible]=useState(false)
+
+        useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            const entry=entries[0]
+                if(entry.isIntersecting){
+                    setVisible(true)
+                    console.log("elementos entro")
+                }else{
+                    setVisible(false)
+                }
+            },{threshold:0.2})
+    
+            if (refAbout.current) {
+                observer.observe(refAbout.current);
+            }
+    
+            return () => observer.disconnect();
+      }, []);
+
+
     return(
-        <Conteiner>
+        <Conteiner visible={visible} ref={refAbout}>
             <HedaerAbout>
                 <h2> .../About me...</h2>
                 <div>
@@ -23,7 +48,7 @@ export default function SectionAbout(){
                     </p>
                 </div>
             </HedaerAbout>
-            <main> 
+             <main > 
                 <div className="divImgProfile">
                     <img src={imgProfile}/>
                 </div>

@@ -1,4 +1,5 @@
 
+import { useEffect, useRef, useState } from "react";
 import { Conteiner, ConteinerSkil } from "./styles";
 type propsPRojects={
     title:string,
@@ -8,8 +9,31 @@ type propsPRojects={
     directleft?:boolean
 }
 export default function Projects({directleft=false,title,img,skil,description}:propsPRojects){
+
+
+    const[visible,setVisible]=useState(false)
+    
+    const refPtojects=useRef<HTMLDivElement>(null)
+    
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+                const entry=entries[0]
+                    if(entry.isIntersecting){
+                        setVisible(true)
+                        console.log("elementos entro")
+                    }else{
+                        setVisible(false)
+                    }
+                },{threshold:0.2})
+        
+                if (refPtojects.current) {
+                    observer.observe(refPtojects.current);
+                }
+        
+                return () => observer.disconnect();
+          }, []);
     return(
-        <Conteiner directleft={directleft} >
+        <Conteiner ref={refPtojects} visible={visible} directleft={directleft} >
                 <div>
                    <h1>
                       {title}
