@@ -57,7 +57,7 @@ export const Conteiner=styled.section<{visible:boolean}>`
                 >img{
              
                     width:90%;
-                    width: 300px;
+                    height: fit-content;
                    
                 }
             }
