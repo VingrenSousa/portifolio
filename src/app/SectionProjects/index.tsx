@@ -21,7 +21,7 @@ export default function SectionProjects(){
                 </h2>
             </HeaderProjects>
             <Projects img={imgAppReceitas} title="myFood" description={descriptiosMyFood} skil={["react.native","typeScript","expo","expo.Router","expo.reanimed","expo.sqlite"]}/>
-            <Projects directleft={true} img={noteFullSteck} title="myFood" description={descriptionFullSteck} skil={["react","typeScript","node.js","vite","express","knex","sqlie","jwt","bcrypt"]}/>
+            <Projects directleft={true} img={noteFullSteck} title="anotei.app" description={descriptionFullSteck} skil={["react","typeScript","node.js","vite","express","knex","sqlie","jwt","bcrypt"]}/>
             <Projects directleft={false} img={imgAppRoteiroIa} title="RoteiroIa" description={descriptionRoteiroIa} skil={["react.native","typeScript","expo","api.opemIa"]}/>
            
         </Conteiner>
