@@ -43,6 +43,7 @@ export const Conteiner=styled.section<{visible:boolean}>`
                 justify-content: center;
                 align-items: center;
                 width: 90%;
+                
             }
         }
          
@@ -56,6 +57,7 @@ export const Conteiner=styled.section<{visible:boolean}>`
                 >img{
              
                     width:90%;
+                    width: 300px;
                    
                 }
             }
